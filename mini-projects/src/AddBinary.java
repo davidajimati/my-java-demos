@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
 public class AddBinary {
     public static void main(String[] args) {
@@ -9,26 +9,26 @@ public class AddBinary {
         System.out.println("Enter the second binary number: ");
         long b = input.nextLong();
 
-//        System.out.println("The addition of " + a + " and " + b + "in base 2 is: ");
+        System.out.println("The addition of " + a + " and " + b + " in base 2 is: ");
         Object[] resp = binaryAdder(a, b);
-        int[] result = resp[1];
+        int[] result = (int[]) resp[1];
 
+        System.out.println(Arrays.toString(result));
 
-//        System.out.println(answer);
-        int j = resp[1].length - 1;
-        while (j >= 0){
-            System.out.print(answer[j]);
-            --j;
+        int len = (int)resp[2];
+
+        while (len >= 0){
+            System.out.print(result[len]);
+            --len;
         }
     }
 
     private static Object[] binaryAdder(long binary1, long binary2) {
         int i = 0, rem = 0;
-        int[] sum = new int [20];
-        while(binary1 !=0 || binary2 != 0) {
-            sum[i] = (int)(binary1 % 10 + binary2 % 10 + rem) % 2;
-            rem = (int)(binary1 % 10 + binary2 % 10 + rem) / 2;
-//            System.out.println(sum[i]);
+        int[] sum = new int[20];
+        while (binary1 != 0 || binary2 != 0) {
+            sum[i] = (int) (binary1 % 10 + binary2 % 10 + rem) % 2;
+            rem = (int) (binary1 % 10 + binary2 % 10 + rem) / 2;
             binary1 /= 10;
             binary2 /= 10;
             i++;
@@ -37,15 +37,8 @@ public class AddBinary {
             sum[++i] = rem;
 
         Object[] objects = new Object[2];
-        objects[1] = sum;
-        objects[2] = i;
-
+        objects[0] = sum;
+        objects[1] = i;
         return objects;
     }
-    public Results (List<Integer> list, int b) {
-        this.list = list;
-
-
-    }
-
 }

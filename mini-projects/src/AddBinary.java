@@ -1,3 +1,9 @@
+/**
+ * This program accepts 2 binary numbers
+ * adds them together and outputs the addition of the
+ * 2 numbers in binary
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

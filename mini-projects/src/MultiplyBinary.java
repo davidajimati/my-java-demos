@@ -4,6 +4,8 @@
  */
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class MultiplyBinary {
     public static void main(String[] args) {
@@ -20,8 +22,13 @@ public class MultiplyBinary {
         System.out.println(multiplyHelper(input1, input2));
     }
 
-    private static int multiplyHelper(int a, int b) {
-        int i, j, answer,
+    private static List<Integer> multiplyHelper(int a, int b) {
+        int i, j, rem = 0;
+        List<Integer> product = new ArrayList<>();
+        while(a != 0|| b != 0) {
+            product.add((int) ((a % 10) * (b % 10) + rem) % 2);
+        }
+        return product;
 
     }
 }

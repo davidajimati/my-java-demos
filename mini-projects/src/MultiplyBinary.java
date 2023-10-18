@@ -42,21 +42,17 @@ public class MultiplyBinary {
             while(b != 0) {
                 product.clear();
                 product.add(((focus * (b % 10) + rem) % 2));
-                System.out.println("product update - product adding: " + product);
                 rem = (((focus * (b % 10) + rem) / 2));
 
                 for(;zeros > 0; zeros--) {
                     product.add(0);
-                    System.out.println("CollatedProduct update - adding zeros: " + product);
                 }
                 b /= 10;
             }
             if (rem != 0)
                 product.add(rem);
             rem = 0;
-            System.out.println("product update - added rems: " + product);
             collatedProduct.add(product);
-            System.out.println("CollatedProduct update:  - bottom line" + product);
             ++zeros;
         }
         return collatedProduct;

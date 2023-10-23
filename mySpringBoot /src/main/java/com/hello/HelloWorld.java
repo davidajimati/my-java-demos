@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -13,7 +14,23 @@ public class HelloWorld {
         SpringApplication.run(HelloWorld.class, args);
     }
     @GetMapping("/greet")
-    public String greet() {
-        return "Hello";
+    public greetResponse greet() {
+//        return "Hello";
+        greetResponse greetResponse = new greetResponse("Hello",
+                List.of("Man U", "Barcelona", "Real Madrid", "FC bayern"),
+                new Person("Ajimati", 20, 670_000_000, true));
+        return greetResponse;
+    }
+
+    record Person(String name,
+                  int age,
+                  double availableCash,
+                  Boolean married
+                  ){}
+    record greetResponse(
+            String greet,
+            List<String> favClubs,
+            Person person
+    ) {
     }
 }

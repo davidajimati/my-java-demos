@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 @SpringBootApplication
 @RestController
 public class HelloWorld {
@@ -16,10 +17,9 @@ public class HelloWorld {
     @GetMapping("/greet")
     public greetResponse greet() {
 //        return "Hello";
-        greetResponse greetResponse = new greetResponse("Hello",
+        return new greetResponse("Hello",
                 List.of("Man U", "Barcelona", "Real Madrid", "FC bayern"),
                 new Person("Ajimati", 20, 670_000_000, true));
-        return greetResponse;
     }
 
     record Person(String name,

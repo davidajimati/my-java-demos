@@ -91,13 +91,33 @@ public class Exercises {
     // SET EXERCISES
     // -----------------------------------------
 
-    public  static void createSet(){
+    public static void createSet() {
         TreeSet<String> mySet = new TreeSet<>();
         mySet.add("Red");
         mySet.add("Green");
         mySet.add("Blue");
         mySet.add("Yellow");
-        mySet.add("Yellow");
         System.out.println(mySet);
+    }
+
+    public static void addBothSet() {
+        TreeSet<String> mySet = new TreeSet<>();
+        mySet.add("Red");
+        mySet.add("Green");
+        mySet.add("Blue");
+        mySet.add("Yellow");
+
+        TreeSet<String> set2 = new TreeSet<>();
+        set2.add("Indigo");
+        set2.add("Violet");
+        set2.add("Orange");
+        set2.add("Brown");
+
+        System.out.println(set2);
+        System.out.println("---------");
+
+        set2.addAll(mySet);
+        System.out.println(set2);
+
     }
 }

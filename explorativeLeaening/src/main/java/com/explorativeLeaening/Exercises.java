@@ -3,6 +3,7 @@ package com.explorativeLeaening;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class Exercises {
@@ -113,11 +114,19 @@ public class Exercises {
         set2.add("Orange");
         set2.add("Brown");
 
-        System.out.println(set2);
-        System.out.println("---------");
-
+//        System.out.println("Before addAll" + set2);
+//        System.out.println("---------");
         set2.addAll(mySet);
-        System.out.println(set2);
+//        System.out.println("After adAll" + set2);
 
+        Iterator it_elem = set2.descendingIterator();
+//        System.out.println("Colors in reverse order");
+//        while (it_elem.hasNext()) {
+////            System.out.println(it_elem.next());
+//        }
+
+        TreeSet<String> duplicate = (TreeSet<String>) set2.clone();
+        duplicate.remove("Yellow");
+        System.out.println(duplicate);
     }
 }

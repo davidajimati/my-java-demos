@@ -3,6 +3,7 @@ package com.explorativeLeaening;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.TreeSet;
 
 public class Exercises {
     // exercise 1 - create and array
@@ -90,5 +91,13 @@ public class Exercises {
     // SET EXERCISES
     // -----------------------------------------
 
-
+    public  static void createSet(){
+        TreeSet<String> mySet = new TreeSet<>();
+        mySet.add("Red");
+        mySet.add("Green");
+        mySet.add("Blue");
+        mySet.add("Yellow");
+        mySet.add("Yellow");
+        System.out.println(mySet);
+    }
 }

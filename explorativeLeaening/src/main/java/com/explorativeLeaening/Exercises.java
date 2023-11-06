@@ -1,3 +1,4 @@
+// ARRAYLIST EXERCISES
 package com.explorativeLeaening;
 
 import java.util.ArrayList;
@@ -67,4 +68,27 @@ public class Exercises {
         }
         return myArray;
     }
+
+    //ex 8
+    public static void reverseArray() {
+        String[] list = {"king", "Queen", "Prince", "princess", "Knight", "Slave"};
+        ArrayList<String> myArray = new ArrayList<>(Arrays.asList(list));
+        ArrayList<String> tempArray = new ArrayList<>();
+        tempArray = myArray;
+        int var1 = 0;
+        int var2 = (tempArray.size() - 1);
+        while (var2 <= 0) {
+            myArray.set(var1, tempArray.get(var2));
+            var1++;
+            var2--;
+        }
+//        System.out.println(Collections.reverse(myArray));
+        System.out.println(tempArray);
+    }
+
+    // _________________________________________
+    // SET EXERCISES
+    // -----------------------------------------
+
+
 }

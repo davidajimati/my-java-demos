@@ -1,6 +1,7 @@
 package com.explorativeLeaening;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Exercises {
     // exercise 1 - create and array
@@ -56,4 +57,14 @@ public class Exercises {
         System.out.println(myArray);
     }
 
+    // ex 5 - update an array by a given element
+    public static ArrayList<Object> updateArray(String elem) {
+        String[] list = {"king", "Queen", "Prince", "princess"};
+
+        ArrayList<Object> myArray = new ArrayList<>(Arrays.asList(list));
+        if (!myArray.contains(elem)) {
+            myArray.add(elem);
+        }
+        return myArray;
+    }
 }

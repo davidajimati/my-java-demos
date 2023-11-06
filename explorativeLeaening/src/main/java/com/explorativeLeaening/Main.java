@@ -8,5 +8,6 @@ public class Main {
 //        iterateArray();
         System.out.println("--------");
         insertFirst();
+        System.out.println(updateArray("Knight"));
     }
 }

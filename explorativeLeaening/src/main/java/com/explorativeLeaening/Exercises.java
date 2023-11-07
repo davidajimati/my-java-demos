@@ -142,7 +142,7 @@ public class Exercises {
 
     // EX 1 - associate specified values with keys in hashmap
     public static void createHashMap() {
-        HashMap<Integer, String> myHash = new HashMap<>();
+        HashMap<Integer, String> myHash = new HashMap<Integer, String>();
         myHash.put(1, "red");
         myHash.put(2, "yellow");
         myHash.put(3, "blue");
@@ -150,6 +150,36 @@ public class Exercises {
         myHash.put(5, "cyan");
         myHash.put(6, "violet");
 
-        System.out.println(myHash);
+//        System.out.println(myHash);
+
+        // associate keys to values
+//        for (Entry k : myHash.entrySet()) {
+//            System.out.println(k.getKey() + ": " + k.getValue());
+//        }
+
+        // count the number of key-value pairs
+//        int i = 0;
+//        for (Map.Entry k: myHash.entrySet()) {
+//            i++;
+//        }
+//        System.out.println(i);
+
+        // copy map to another Map
+        HashMap<Integer, String> secondHash = new HashMap<Integer, String>(myHash);
+        // OR
+//        secondHash.putAll(myHash);
+        // ------------
+//        secondHash.put(7, "Indigo");
+//        System.out.println(myHash);
+//        System.out.println(secondHash);
+
+        // REMOVE ALL MAPPINGS FROM MAP
+//        secondHash.clear();
+//        System.out.println(secondHash);
+
+    }
+
+    public static boolean hashIsEmpty(HashMap hashMap) {
+        return  hashMap.isEmpty();
     }
 }

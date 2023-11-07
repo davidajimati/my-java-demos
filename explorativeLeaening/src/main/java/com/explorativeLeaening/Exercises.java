@@ -1,10 +1,7 @@
 // ARRAYLIST EXERCISES
 package com.explorativeLeaening;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Exercises {
     // exercise 1 - create and array
@@ -126,7 +123,33 @@ public class Exercises {
 //        }
 
         TreeSet<String> duplicate = (TreeSet<String>) set2.clone();
-        duplicate.remove("Yellow");
-        System.out.println(duplicate);
+//        duplicate.remove("Yellow");
+        int i = 0;
+//        for (String elem : duplicate) {
+//            if (i == 0) {
+//                System.out.println(elem);
+//                duplicate.remove(elem);
+//                System.out.println(duplicate);
+//                return;
+//            }
+//        }
+        System.out.println(duplicate.pollFirst());
+    }
+
+    // ------------------------------------------
+    // HASHMAP
+    // ------------------------------------------
+
+    // EX 1 - associate specified values with keys in hashmap
+    public static void createHashMap() {
+        HashMap<Integer, String> myHash = new HashMap<>();
+        myHash.put(1, "red");
+        myHash.put(2, "yellow");
+        myHash.put(3, "blue");
+        myHash.put(4, "green");
+        myHash.put(5, "cyan");
+        myHash.put(6, "violet");
+
+        System.out.println(myHash);
     }
 }

@@ -177,9 +177,22 @@ public class Exercises {
 //        secondHash.clear();
 //        System.out.println(secondHash);
 
+//        Set set = secondHash.entrySet();
+//        System.out.println(secondHash.get(3));
+//        System.out.println(set);
+
+        // SET view of what is contained in the map
+//        Set set = secondHash.keySet();
+
+        System.out.println(secondHash.values());
+
     }
 
     public static boolean hashIsEmpty(HashMap hashMap) {
         return  hashMap.isEmpty();
+    }
+
+    public static boolean containsEntry(HashMap hashMap ,int k) {
+        return  hashMap.containsKey(k);
     }
 }

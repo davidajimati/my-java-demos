@@ -1,4 +1,4 @@
-package com.explorativeLeaening;
+package com.explorativeLeaening.generics;
 
 public class GenericsExample<T extends Animal> {
     public static String shout(Animal animal) {

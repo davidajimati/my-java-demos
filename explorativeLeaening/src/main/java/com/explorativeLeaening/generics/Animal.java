@@ -1,4 +1,4 @@
-package com.explorativeLeaening;
+package com.explorativeLeaening.generics;
 
 public class Animal {
     String name;

@@ -3,7 +3,7 @@ package com.explorativeLeaening;
 
 import java.util.*;
 
-public class Exercises {
+public class CollectionExercises {
     // exercise 1 - create and array
     public static ArrayList<String> createArray() {
         ArrayList<String> array_list = new ArrayList<>();

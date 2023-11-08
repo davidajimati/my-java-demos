@@ -1,4 +1,4 @@
-package com.explorativeLeaening;
+package com.explorativeLeaening.generics;
 
 public class Cat extends Animal {
     String name;

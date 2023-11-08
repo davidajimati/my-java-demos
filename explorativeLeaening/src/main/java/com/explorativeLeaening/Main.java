@@ -1,8 +1,12 @@
 package com.explorativeLeaening;
 
+import com.explorativeLeaening.generics.Animal;
+import com.explorativeLeaening.generics.Cat;
+import com.explorativeLeaening.generics.Dog;
+
 import java.util.ArrayList;
 
-import static com.explorativeLeaening.GenericsExample.shout;
+import static com.explorativeLeaening.generics.GenericsExample.shout;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.explorativeLeaening;
+package com.explorativeLeaening.generics;
 
 public class Dog extends Animal {
     String name;
